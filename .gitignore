@@ -1,0 +1,27 @@
+### Python ###
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.log
+
+braille_segment.h5/
+saved/
+*.zip
+
+# Data
+Annotation/
+labels/
+image/
+Images/
+test_image/
+test_img/
+test_result/
+*.jpg
+*.png
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environment
+.vscode/
