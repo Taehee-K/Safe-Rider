@@ -17,9 +17,12 @@ Images/
 test_image/
 test_img/
 test_result/
+
+# paperwork
 readme/
 *.jpg
 *.png
+*.pdf
 
 # Jupyter Notebook
 .ipynb_checkpoints
