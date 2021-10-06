@@ -1,4 +1,5 @@
 # Safe Rider
+고은지 김민지 김태희 이수연 정희원<br>
 (2020.12.17~2020.12.19)
 
 ## Overview
@@ -9,27 +10,45 @@ Safe Rider는 사용자와 보행자 모두가 안전한 전동킥보드 시스�
 본 프로젝트는 시각장애인 보행자 안전을 고려한 주차 및 양손운전을 유도함으로써 보다 안전한 전동킥보드 시스템을 제안합니다.
 
 ## Implementation
-### 안전주차
+**안전주차**<br>
 <img alt="braille-kickboard" src="https://user-images.githubusercontent.com/63901494/136039318-2591657f-6bab-46ac-9a47-791ff3d213b0.png" height="200"><br>
 현재 전동킥보드 사용자는 반납 시 확인을 위해 전동킥보드 대여 앱에 사진을 찍어 인증해야 합니다. <br>
 이미지 인식 기술을 활용해 시각장애를 가진 보행자들의 안전에 위협이 되는 위치, 즉 점자블록 근처에 킥보드가 주차된 경우를 식별해 주차 불가 장소임을 알립니다. <br>
 <br>
 점자블록 탐지 모델로는 [You Only Look Once: Unified, Real-Time Object Detection, 2015](https://arxiv.org/abs/1506.02640)의 YOLOv1을 사용하였습니다. 
 
-### 양손운전
+**양손운전**<br>
 <img alt="handle1" src="https://user-images.githubusercontent.com/63901494/136038534-8e0d2b33-03f1-429d-b704-914f92d42bdc.png" height="200">&nbsp;&nbsp;<img alt="handle2" src="https://user-images.githubusercontent.com/63901494/136038854-4f657831-4aab-4c16-86a5-472729f615b2.png" height="200"><br>
 손잡이의 아두이노 센서를  전동킥보드 운전자가 양손을 손잡이에 올려둔 채 주행하고 있는지 확인 합니다.<br> 
 한 손만 이용하여 주행 중인 것이 확인되면 경고 알람을 울려 사용자의 안전한 운전을 유도합니다.
 
+## Usage
+Clone Repository
+```
+git clone https://github.com/Taehee-K/Safe-Rider.git
+cd Safe-Rider/src
+```
+**안전주차**<br>
+```
+// Train
+python main.py --training True
+
+// Demo
+streamlit run app.py
+```
+
+**양손운전**<br>
+```
+// Run following file on Arduino IDE
+handle.ino
+```
+
 ## Demo
-### 안전주차
+**안전주차**<br>
 https://user-images.githubusercontent.com/63901494/136041302-2d9c9faf-9a94-4517-9a52-0c9572072317.mov 
 
-### 양손운전
+**양손운전**<br>
 https://user-images.githubusercontent.com/63901494/136041767-e52aa982-0350-428f-8fa0-133120e88502.mp4 
-
-## Contributors
-고은지 김민지 김태희 이수연 정희원
 
 ## Reference
 * [krlee407/Braille-Blocks](https://github.com/krlee407/Braille-Blocks)
