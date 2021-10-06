@@ -39,7 +39,7 @@ streamlit run app.py
 
 **양손운전**<br>
 ```
-// run on Arduino IDE
+// Run on Arduino IDE
 handle.ino
 ```
 
